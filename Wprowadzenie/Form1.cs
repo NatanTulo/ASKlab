@@ -15,6 +15,7 @@ namespace Lab1
         public Form1()
         {
             InitializeComponent();
+            this.x = 0; // tu nadajemy wartości początkowe zmiennych
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -62,6 +63,35 @@ namespace Lab1
             this.openFileDialog1.ShowDialog();
             this.label1.Text = this.openFileDialog1.FileName;
             this.pictureBox1.Load(this.openFileDialog1.FileName);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (x == 0){
+                x = 1;
+                this.pictureBox1.Load("C:\\Users\\natan\\OneDrive - Politechnika Gdańska\\Stable Diffusion\\txt2img\\2023-05-05\\00000-841089095.png");
+            }
+            else if (x == 1){
+                x = 2;
+                this.pictureBox1.Load("C:\\Users\\natan\\OneDrive - Politechnika Gdańska\\Stable Diffusion\\txt2img\\2023-05-05\\00000-2852612156.png");
+            }
+            else if (x == 2){
+                x = 3;
+                this.pictureBox1.Load("C:\\Users\\natan\\OneDrive - Politechnika Gdańska\\Stable Diffusion\\txt2img\\2023-05-05\\00001-2432068759.png");
+            }
+            else if (x == 3){
+                x = 0;
+                this.pictureBox1.Load("C:\\Users\\natan\\OneDrive - Politechnika Gdańska\\Stable Diffusion\\txt2img\\2023-05-05\\00002-2874387958.png");
+            }
+            this.label2.Text="wartość zmiennej statycznej x_st = "+ Form1.x_st.ToString();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //this.okno = new Form2();
+            this.okno = new Form2(158); //inny konstruktor
+            //this.okno.Show(); // otwiera okno jako osobne okno
+            this.okno.ShowDialog(); // otwiera okno jako dialog (nie można przełączyć się na okno główne)
         }
     }
 }

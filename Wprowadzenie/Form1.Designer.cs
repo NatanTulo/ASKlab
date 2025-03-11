@@ -4,6 +4,9 @@
     {
         /// <summary>
         /// Wymagana zmienna projektanta.
+        public int x;
+        public Form2 okno;
+        public static int x_st = 0;
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
@@ -28,20 +31,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.plikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.edycjaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.plikToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.otwórzToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zapiszToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zakończToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.edycjaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rysujToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kasujToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.plikToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button3 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -81,9 +88,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(588, 464);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "label1";
+            this.label1.Text = "ścieżka";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // menuStrip1
@@ -109,6 +116,26 @@
             this.plikToolStripMenuItem.Text = "Plik";
             this.plikToolStripMenuItem.Click += new System.EventHandler(this.plikToolStripMenuItem_Click);
             // 
+            // otwórzToolStripMenuItem
+            // 
+            this.otwórzToolStripMenuItem.Name = "otwórzToolStripMenuItem";
+            this.otwórzToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.otwórzToolStripMenuItem.Text = "Otwórz";
+            this.otwórzToolStripMenuItem.Click += new System.EventHandler(this.otwórzToolStripMenuItem_Click);
+            // 
+            // zapiszToolStripMenuItem
+            // 
+            this.zapiszToolStripMenuItem.Name = "zapiszToolStripMenuItem";
+            this.zapiszToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.zapiszToolStripMenuItem.Text = "Zapisz";
+            // 
+            // zakończToolStripMenuItem
+            // 
+            this.zakończToolStripMenuItem.Name = "zakończToolStripMenuItem";
+            this.zakończToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.zakończToolStripMenuItem.Text = "Zakończ";
+            this.zakończToolStripMenuItem.Click += new System.EventHandler(this.zakończToolStripMenuItem_Click);
+            // 
             // edycjaToolStripMenuItem
             // 
             this.edycjaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -119,6 +146,18 @@
             this.edycjaToolStripMenuItem.Text = "Edycja";
             this.edycjaToolStripMenuItem.Click += new System.EventHandler(this.edycjaToolStripMenuItem_Click);
             // 
+            // rysujToolStripMenuItem
+            // 
+            this.rysujToolStripMenuItem.Name = "rysujToolStripMenuItem";
+            this.rysujToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
+            this.rysujToolStripMenuItem.Text = "Rysuj";
+            // 
+            // kasujToolStripMenuItem
+            // 
+            this.kasujToolStripMenuItem.Name = "kasujToolStripMenuItem";
+            this.kasujToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
+            this.kasujToolStripMenuItem.Text = "Kasuj";
+            // 
             // plikToolStripMenuItem1
             // 
             this.plikToolStripMenuItem1.Name = "plikToolStripMenuItem1";
@@ -126,41 +165,34 @@
             this.plikToolStripMenuItem1.Text = "Info";
             this.plikToolStripMenuItem1.Click += new System.EventHandler(this.plikToolStripMenuItem1_Click);
             // 
-            // otwórzToolStripMenuItem
-            // 
-            this.otwórzToolStripMenuItem.Name = "otwórzToolStripMenuItem";
-            this.otwórzToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.otwórzToolStripMenuItem.Text = "Otwórz";
-            this.otwórzToolStripMenuItem.Click += new System.EventHandler(this.otwórzToolStripMenuItem_Click);
-            // 
-            // zapiszToolStripMenuItem
-            // 
-            this.zapiszToolStripMenuItem.Name = "zapiszToolStripMenuItem";
-            this.zapiszToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.zapiszToolStripMenuItem.Text = "Zapisz";
-            // 
-            // zakończToolStripMenuItem
-            // 
-            this.zakończToolStripMenuItem.Name = "zakończToolStripMenuItem";
-            this.zakończToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.zakończToolStripMenuItem.Text = "Zakończ";
-            this.zakończToolStripMenuItem.Click += new System.EventHandler(this.zakończToolStripMenuItem_Click);
-            // 
-            // rysujToolStripMenuItem
-            // 
-            this.rysujToolStripMenuItem.Name = "rysujToolStripMenuItem";
-            this.rysujToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.rysujToolStripMenuItem.Text = "Rysuj";
-            // 
-            // kasujToolStripMenuItem
-            // 
-            this.kasujToolStripMenuItem.Name = "kasujToolStripMenuItem";
-            this.kasujToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.kasujToolStripMenuItem.Text = "Kasuj";
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(880, 254);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "otwóż okno";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(830, 329);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "label2";
             // 
             // Form1
             // 
@@ -170,6 +202,8 @@
             this.BackgroundImage = global::Lab1.Properties.Resources._00021_176026200;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1079, 625);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.pictureBox1);
@@ -203,6 +237,9 @@
         private System.Windows.Forms.ToolStripMenuItem rysujToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kasujToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label2;
     }
 }
 
