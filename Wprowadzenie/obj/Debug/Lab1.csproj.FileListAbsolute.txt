@@ -1,0 +1,10 @@
+C:\PG\C#\ASK\Lab1\bin\Debug\Lab1.exe.config
+C:\PG\C#\ASK\Lab1\bin\Debug\Lab1.exe
+C:\PG\C#\ASK\Lab1\bin\Debug\Lab1.pdb
+C:\PG\C#\ASK\Lab1\obj\Debug\Lab1.csproj.AssemblyReference.cache
+C:\PG\C#\ASK\Lab1\obj\Debug\Lab1.Form1.resources
+C:\PG\C#\ASK\Lab1\obj\Debug\Lab1.Properties.Resources.resources
+C:\PG\C#\ASK\Lab1\obj\Debug\Lab1.csproj.GenerateResource.cache
+C:\PG\C#\ASK\Lab1\obj\Debug\Lab1.csproj.CoreCompileInputs.cache
+C:\PG\C#\ASK\Lab1\obj\Debug\Lab1.exe
+C:\PG\C#\ASK\Lab1\obj\Debug\Lab1.pdb
