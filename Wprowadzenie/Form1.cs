@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace Lab1
 {
@@ -92,6 +93,53 @@ namespace Lab1
             this.okno = new Form2(158); //inny konstruktor
             //this.okno.Show(); // otwiera okno jako osobne okno
             this.okno.ShowDialog(); // otwiera okno jako dialog (nie można przełączyć się na okno główne)
+        }
+
+        private void przycisk_Click(object sender, EventArgs e)
+        {
+            Button przycisk = (Button)sender;
+            if (przycisk.Name == "jeden") 
+            {
+                this.label3.Text = "Wciśnięto przycisk jeden";
+                this.jeden.BackColor = Color.Red;
+                this.dwa.BackColor = Color.LightGray;
+                this.trzy.BackColor = Color.LightGray;
+            }
+            if (przycisk.Name == "dwa")
+            {
+                this.label3.Text = "Wciśnięto przycisk dwa";
+                this.jeden.BackColor = Color.LightGray;
+                this.dwa.BackColor = Color.Red;
+                this.trzy.BackColor = Color.LightGray;
+            }
+            if (przycisk.Name == "trzy")
+            {
+                this.label3.Text = "Wciśnięto przycisk trzy";
+                this.jeden.BackColor = Color.LightGray;
+                this.dwa.BackColor = Color.LightGray;
+                this.trzy.BackColor = Color.Red;
+            }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == '1')
+            {
+                this.jeden.PerformClick();
+            }
+            if (e.KeyChar == '2')
+            {
+                this.dwa.PerformClick();
+            }
+            if (e.KeyChar == '3')
+            {
+                this.trzy.PerformClick();
+            }
         }
     }
 }
