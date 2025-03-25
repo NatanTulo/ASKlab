@@ -53,16 +53,16 @@
             this.dwa = new System.Windows.Forms.Button();
             this.trzy = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(529, 699);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(397, 568);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 28);
+            this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
             this.button1.Text = "Zakończ";
             this.button1.UseVisualStyleBackColor = true;
@@ -72,20 +72,18 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Lab1.Properties.Resources._00000_2852612156;
-            this.pictureBox1.Location = new System.Drawing.Point(624, 272);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(468, 221);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(365, 267);
+            this.pictureBox1.Size = new System.Drawing.Size(274, 217);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(919, 699);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Location = new System.Drawing.Point(689, 568);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(123, 28);
+            this.button2.Size = new System.Drawing.Size(92, 23);
             this.button2.TabIndex = 2;
             this.button2.Text = "Otwórz obraz";
             this.button2.UseVisualStyleBackColor = true;
@@ -95,10 +93,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(784, 571);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(588, 464);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 16);
+            this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "ścieżka";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -112,7 +109,8 @@
             this.plikToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1444, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1083, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -123,27 +121,27 @@
             this.zapiszToolStripMenuItem,
             this.zakończToolStripMenuItem});
             this.plikToolStripMenuItem.Name = "plikToolStripMenuItem";
-            this.plikToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
+            this.plikToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
             this.plikToolStripMenuItem.Text = "Plik";
             this.plikToolStripMenuItem.Click += new System.EventHandler(this.plikToolStripMenuItem_Click);
             // 
             // otwórzToolStripMenuItem
             // 
             this.otwórzToolStripMenuItem.Name = "otwórzToolStripMenuItem";
-            this.otwórzToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
+            this.otwórzToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.otwórzToolStripMenuItem.Text = "Otwórz";
             this.otwórzToolStripMenuItem.Click += new System.EventHandler(this.otwórzToolStripMenuItem_Click);
             // 
             // zapiszToolStripMenuItem
             // 
             this.zapiszToolStripMenuItem.Name = "zapiszToolStripMenuItem";
-            this.zapiszToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
+            this.zapiszToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.zapiszToolStripMenuItem.Text = "Zapisz";
             // 
             // zakończToolStripMenuItem
             // 
             this.zakończToolStripMenuItem.Name = "zakończToolStripMenuItem";
-            this.zakończToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
+            this.zakończToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.zakończToolStripMenuItem.Text = "Zakończ";
             this.zakończToolStripMenuItem.Click += new System.EventHandler(this.zakończToolStripMenuItem_Click);
             // 
@@ -153,26 +151,26 @@
             this.rysujToolStripMenuItem,
             this.kasujToolStripMenuItem});
             this.edycjaToolStripMenuItem.Name = "edycjaToolStripMenuItem";
-            this.edycjaToolStripMenuItem.Size = new System.Drawing.Size(66, 24);
+            this.edycjaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.edycjaToolStripMenuItem.Text = "Edycja";
             this.edycjaToolStripMenuItem.Click += new System.EventHandler(this.edycjaToolStripMenuItem_Click);
             // 
             // rysujToolStripMenuItem
             // 
             this.rysujToolStripMenuItem.Name = "rysujToolStripMenuItem";
-            this.rysujToolStripMenuItem.Size = new System.Drawing.Size(127, 26);
+            this.rysujToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
             this.rysujToolStripMenuItem.Text = "Rysuj";
             // 
             // kasujToolStripMenuItem
             // 
             this.kasujToolStripMenuItem.Name = "kasujToolStripMenuItem";
-            this.kasujToolStripMenuItem.Size = new System.Drawing.Size(127, 26);
+            this.kasujToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
             this.kasujToolStripMenuItem.Text = "Kasuj";
             // 
             // plikToolStripMenuItem1
             // 
             this.plikToolStripMenuItem1.Name = "plikToolStripMenuItem1";
-            this.plikToolStripMenuItem1.Size = new System.Drawing.Size(49, 24);
+            this.plikToolStripMenuItem1.Size = new System.Drawing.Size(40, 20);
             this.plikToolStripMenuItem1.Text = "Info";
             this.plikToolStripMenuItem1.Click += new System.EventHandler(this.plikToolStripMenuItem1_Click);
             // 
@@ -188,10 +186,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(1173, 313);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Location = new System.Drawing.Point(880, 254);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 28);
+            this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 5;
             this.button3.Text = "otwóż okno";
             this.button3.UseVisualStyleBackColor = true;
@@ -201,18 +198,18 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(1107, 405);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(830, 329);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 16);
+            this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 6;
             this.label2.Text = "label2";
             // 
             // jeden
             // 
-            this.jeden.Location = new System.Drawing.Point(178, 141);
+            this.jeden.Location = new System.Drawing.Point(134, 115);
+            this.jeden.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.jeden.Name = "jeden";
-            this.jeden.Size = new System.Drawing.Size(35, 39);
+            this.jeden.Size = new System.Drawing.Size(26, 32);
             this.jeden.TabIndex = 7;
             this.jeden.Text = "1";
             this.jeden.UseVisualStyleBackColor = true;
@@ -221,9 +218,10 @@
             // 
             // dwa
             // 
-            this.dwa.Location = new System.Drawing.Point(242, 141);
+            this.dwa.Location = new System.Drawing.Point(182, 115);
+            this.dwa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dwa.Name = "dwa";
-            this.dwa.Size = new System.Drawing.Size(34, 39);
+            this.dwa.Size = new System.Drawing.Size(26, 32);
             this.dwa.TabIndex = 8;
             this.dwa.Text = "2";
             this.dwa.UseVisualStyleBackColor = true;
@@ -232,9 +230,10 @@
             // 
             // trzy
             // 
-            this.trzy.Location = new System.Drawing.Point(305, 141);
+            this.trzy.Location = new System.Drawing.Point(229, 115);
+            this.trzy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.trzy.Name = "trzy";
-            this.trzy.Size = new System.Drawing.Size(35, 39);
+            this.trzy.Size = new System.Drawing.Size(26, 32);
             this.trzy.TabIndex = 9;
             this.trzy.Text = "3";
             this.trzy.UseVisualStyleBackColor = true;
@@ -244,21 +243,33 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(247, 244);
+            this.label3.Location = new System.Drawing.Point(185, 198);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 16);
+            this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 10;
             this.label3.Text = "label3";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(248, 370);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 11;
+            this.button4.Text = "/0";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.BackgroundImage = global::Lab1.Properties.Resources._00021_176026200;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1444, 770);
+            this.ClientSize = new System.Drawing.Size(1083, 626);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.trzy);
             this.Controls.Add(this.dwa);
@@ -271,7 +282,6 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -307,6 +317,7 @@
         private System.Windows.Forms.Button dwa;
         private System.Windows.Forms.Button trzy;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button4;
     }
 }
 

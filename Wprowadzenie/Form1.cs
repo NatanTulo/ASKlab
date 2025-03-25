@@ -61,9 +61,27 @@ namespace Lab1
 
         private void otwórzToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.openFileDialog1.CheckFileExists = false;
             this.openFileDialog1.ShowDialog();
             this.label1.Text = this.openFileDialog1.FileName;
-            this.pictureBox1.Load(this.openFileDialog1.FileName);
+            try
+            {
+                this.pictureBox1.Load(this.openFileDialog1.FileName);
+            }
+            catch (System.IO.FileNotFoundException ex1)
+            {
+                //this.label1.Text = ex1.Message;
+                MessageBox.Show(ex1.Message);
+            }
+            catch (System.Exception ex1)
+            {
+                //this.label1.Text = ex1.Message;
+                MessageBox.Show(ex1.Message);
+            }
+            catch
+            {
+                this.label1.Text = "Błąd odczytu pliku";
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -139,6 +157,19 @@ namespace Lab1
             if (e.KeyChar == '3')
             {
                 this.trzy.PerformClick();
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int x = 0, y = 1;
+            try
+            {
+                int z = y / x;
+            }
+            catch(System.DivideByZeroException ex1)
+            {
+                MessageBox.Show(ex1.Message);
             }
         }
     }
