@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.one = new System.Windows.Forms.Button();
             this.plus = new System.Windows.Forms.Button();
             this.six = new System.Windows.Forms.Button();
@@ -54,6 +55,10 @@
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.digital_clock = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.analog = new System.Windows.Forms.Button();
+            this.digital = new System.Windows.Forms.Button();
+            this.analog_clock = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.analog_clock)).BeginInit();
             this.SuspendLayout();
             // 
             // one
@@ -229,6 +234,7 @@
             // clear
             // 
             this.clear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(189)))), ((int)(((byte)(188)))));
+            this.clear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.clear.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.clear.Location = new System.Drawing.Point(271, 326);
@@ -320,11 +326,12 @@
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBox1.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox1.Location = new System.Drawing.Point(5, 177);
+            this.textBox1.Location = new System.Drawing.Point(6, 212);
+            this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(527, 143);
+            this.textBox1.Size = new System.Drawing.Size(520, 108);
             this.textBox1.TabIndex = 21;
             this.textBox1.Text = "0";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -335,18 +342,59 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.digital_clock.AutoSize = true;
-            this.digital_clock.Font = new System.Drawing.Font("Digital-7 Italic", 48F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.digital_clock.Font = new System.Drawing.Font("Digital-7 Italic", 60F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.digital_clock.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.digital_clock.Location = new System.Drawing.Point(123, 50);
+            this.digital_clock.Location = new System.Drawing.Point(163, 56);
             this.digital_clock.Name = "digital_clock";
-            this.digital_clock.Size = new System.Drawing.Size(289, 82);
+            this.digital_clock.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.digital_clock.Size = new System.Drawing.Size(358, 103);
             this.digital_clock.TabIndex = 22;
             this.digital_clock.Text = "00:00:00";
+            this.digital_clock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.digital_clock.Click += new System.EventHandler(this.digital_clock_Click);
             // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // analog
+            // 
+            this.analog.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(189)))), ((int)(((byte)(188)))));
+            this.analog.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.analog.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.analog.Location = new System.Drawing.Point(36, 110);
+            this.analog.Name = "analog";
+            this.analog.Size = new System.Drawing.Size(90, 40);
+            this.analog.TabIndex = 23;
+            this.analog.Text = "ANALOG";
+            this.analog.UseVisualStyleBackColor = false;
+            this.analog.Click += new System.EventHandler(this.analog_Click);
+            // 
+            // digital
+            // 
+            this.digital.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(189)))), ((int)(((byte)(188)))));
+            this.digital.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.digital.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.digital.Location = new System.Drawing.Point(36, 64);
+            this.digital.Name = "digital";
+            this.digital.Size = new System.Drawing.Size(90, 40);
+            this.digital.TabIndex = 24;
+            this.digital.Text = "DIGITAL";
+            this.digital.UseVisualStyleBackColor = false;
+            this.digital.Click += new System.EventHandler(this.digital_Click);
+            // 
+            // analog_clock
+            // 
+            this.analog_clock.Image = ((System.Drawing.Image)(resources.GetObject("analog_clock.Image")));
+            this.analog_clock.Location = new System.Drawing.Point(158, 4);
+            this.analog_clock.Name = "analog_clock";
+            this.analog_clock.Size = new System.Drawing.Size(241, 203);
+            this.analog_clock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.analog_clock.TabIndex = 25;
+            this.analog_clock.TabStop = false;
+            this.analog_clock.Visible = false;
+            this.analog_clock.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.analog_clock.Paint += new System.Windows.Forms.PaintEventHandler(this.analog_clock_paint);
             // 
             // Form1
             // 
@@ -354,6 +402,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(223)))), ((int)(((byte)(221)))));
             this.ClientSize = new System.Drawing.Size(537, 753);
+            this.Controls.Add(this.analog_clock);
+            this.Controls.Add(this.digital);
+            this.Controls.Add(this.analog);
             this.Controls.Add(this.digital_clock);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.comma);
@@ -377,8 +428,10 @@
             this.Controls.Add(this.plus);
             this.Controls.Add(this.one);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Calculator with clock";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.analog_clock)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -411,6 +464,9 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
         private System.Windows.Forms.Label digital_clock;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button analog;
+        private System.Windows.Forms.Button digital;
+        private System.Windows.Forms.PictureBox analog_clock;
     }
 }
 

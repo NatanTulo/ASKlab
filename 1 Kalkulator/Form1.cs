@@ -13,10 +13,16 @@ namespace _1_Kalkulator
 {
     public partial class Form1 : Form
     {
+        Rectangle rect = new Rectangle(0, 0, 80, 80);
+        Pen blackPen = new Pen(Color.Black, 1);
+
         public Form1()
         {
             InitializeComponent();
         }
+
+        int height = 200, width = 200;
+
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -131,16 +137,81 @@ namespace _1_Kalkulator
         private void timer1_Tick(object sender, EventArgs e)
         {
             digital_clock.Text = DateTime.Now.ToString("hh:mm:ss");
+            analog_clock.Invalidate(); // odśwież PictureBox
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             timer1.Start();
+
+
         }
 
         private void digital_clock_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void analog_Click(object sender, EventArgs e)
+        {
+            digital_clock.Visible = false;
+            analog_clock.Visible = true;
+
+        }
+
+        private void digital_Click(object sender, EventArgs e)
+        {
+            digital_clock.Visible = true;
+            analog_clock.Visible = false;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void analog_clock_paint(object sender, PaintEventArgs e)
+        {
+
+            Graphics g = e.Graphics;
+            g.SmoothingMode = SmoothingMode.AntiAlias;
+
+            int centerX = analog_clock.Width / 2;
+            int centerY = analog_clock.Height / 2;
+
+            DateTime now = DateTime.Now;
+
+            // Długości wskazówek
+            int secondLength = 50;
+            int minuteLength = 40;
+            int hourLength = 30;
+
+            // Kąty
+            float secondAngle = now.Second * 6;
+            float minuteAngle = now.Minute * 6 + now.Second * 0.1f;
+            float hourAngle = (now.Hour % 12) * 30 + now.Minute * 0.5f; 
+
+            PointF GetPoint(float angleDeg, float length)
+            {
+                double angleRad = (Math.PI / 180) * (angleDeg - 90); 
+                return new PointF(
+                    centerX + (float)(length * Math.Cos(angleRad)),
+                    centerY + (float)(length * Math.Sin(angleRad))
+                );
+            }
+
+            PointF hourEnd = GetPoint(hourAngle, hourLength);
+            PointF minuteEnd = GetPoint(minuteAngle, minuteLength);
+            PointF secondEnd = GetPoint(secondAngle, secondLength);
+
+            g.DrawLine(new Pen(Color.Black, 3), centerX, centerY, hourEnd.X, hourEnd.Y);
+            g.DrawLine(new Pen(Color.Black, 2), centerX, centerY, minuteEnd.X, minuteEnd.Y);
+            g.DrawLine(new Pen(Color.Black, 1), centerX, centerY, secondEnd.X, secondEnd.Y);
+
+            // Środek
+            g.FillEllipse(Brushes.Black, centerX - 4, centerY - 4, 8, 8);
+        }
+
+
     }
 }
