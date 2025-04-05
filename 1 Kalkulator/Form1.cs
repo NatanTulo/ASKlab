@@ -17,17 +17,13 @@ public struct Equation
     public double secondNumber;
     public char operation;
     public double result;
-    public bool[] isOptionSet;
-    public string equationString;
 
-    public Equation(double firstNumber, double secondNumber, char operation, double result, bool[] isOptionSet)
+    public Equation(double firstNumber, double secondNumber, char operation, double result)
     {
         this.firstNumber = firstNumber;
         this.secondNumber = secondNumber;
         this.operation = operation;
         this.result = result;
-        this.isOptionSet = isOptionSet;
-        this.equationString = string.Empty;
     }
 
     public void Clear()
@@ -36,11 +32,6 @@ public struct Equation
         secondNumber = 0;
         operation = '0';
         result = 0;
-        for (int i = 0; i < isOptionSet.Length; i++)
-        {
-            isOptionSet[i] = false;
-        }
-        equationString = string.Empty;
     }
 
     public void Calculate()
@@ -79,18 +70,17 @@ namespace _1_Kalkulator
         private Rectangle rect = new Rectangle(0, 0, 80, 80);
         private Pen blackPen = new Pen(Color.Black, 1);
         private PrivateFontCollection pfc = new PrivateFontCollection();
-        private Equation equation = new Equation(0, 0, '0', 0, new bool[] { false, false, false, false });
+        private Equation equation = new Equation(0, 0, '0', 0);
 
         private Button lastClickedButton;
         private Color skinColor = Color.FromArgb(244, 189, 188);
+        private bool resultDisplayed = false;
 
         public Form1()
         {
             InitializeComponent();
             this.ActiveControl = this.equals;
         }
-
-        int height = 200, width = 200;
 
         private void calc_Click(object sender, EventArgs e)
         {
@@ -104,7 +94,15 @@ namespace _1_Kalkulator
             }
             if (char.IsDigit(buttonText, 0))
             {
-                textBox1.Text += buttonText;
+                if (textBox1.Text == "0" || resultDisplayed)
+                {
+                    textBox1.Text = buttonText;
+                    resultDisplayed = false;
+                }
+                else
+                {
+                    textBox1.Text += buttonText;
+                }
             }
             switch (przycisk.Name)
             {
@@ -147,11 +145,12 @@ namespace _1_Kalkulator
                 case "zero":
                     this.zero.BackColor = Color.Red;
                     lastClickedButton = this.zero;
+                    if (textBox1.Text != "0")
+                        textBox1.Text += "0";
                     break;
                 case "comma":
                     this.comma.BackColor = Color.Red;
                     lastClickedButton = this.comma;
-
                     if (!textBox1.Text.Contains(","))
                     {
                         textBox1.Text += ",";
@@ -160,14 +159,12 @@ namespace _1_Kalkulator
                 case "clear":
                     this.clear.BackColor = Color.Red;
                     lastClickedButton = this.clear;
-
-                    textBox1.Clear();
+                    textBox1.Text = "0";
                     equation.Clear();
                     break;
                 case "negate":
                     this.negate.BackColor = Color.Red;
                     lastClickedButton = this.negate;
-
                     if (double.TryParse(textBox1.Text, out double value))
                     {
                         textBox1.Text = (-value).ToString();
@@ -176,43 +173,52 @@ namespace _1_Kalkulator
                 case "clear_entry":
                     this.clear_entry.BackColor = Color.Red;
                     lastClickedButton = this.clear_entry;
-
-                    textBox1.Clear();
+                    textBox1.Text = "0";
                     break;
                 case "multiply":
                     this.multiply.BackColor = Color.Red;
                     lastClickedButton = this.multiply;
+                    equation.firstNumber = double.Parse(textBox1.Text);
+                    equation.operation = '*';
+                    textBox1.Text = "0";
                     break;
                 case "division":
                     this.division.BackColor = Color.Red;
                     lastClickedButton = this.division;
+                    equation.firstNumber = double.Parse(textBox1.Text);
+                    equation.operation = '/';
+                    textBox1.Text = "0";
                     break;
                 case "minus":
                     this.minus.BackColor = Color.Red;
                     lastClickedButton = this.minus;
+                    equation.firstNumber = double.Parse(textBox1.Text);
+                    equation.operation = '-';
+                    textBox1.Text = "0";
                     break;
                 case "plus":
                     this.plus.BackColor = Color.Red;
                     lastClickedButton = this.plus;
-                    break;
-                case "equals":
-                    this.equals.BackColor = Color.Red;
-                    lastClickedButton = this.equals;
-
-                    equation.secondNumber = double.Parse(textBox1.Text);
-                    equation.Calculate();
-                    textBox1.Text = equation.result.ToString();
+                    equation.firstNumber = double.Parse(textBox1.Text);
+                    equation.operation = '+';
+                    textBox1.Text = "0";
                     break;
                 case "percent":
                     this.percent.BackColor = Color.Red;
                     lastClickedButton = this.percent;
-                    
                     equation.firstNumber = double.Parse(textBox1.Text);
-                    equation.operation = buttonText[0];
-                    textBox1.Clear();
+                    equation.operation = '%';
+                    textBox1.Text = "0";
+                    break;
+                case "equals":
+                    this.equals.BackColor = Color.Red;
+                    lastClickedButton = this.equals;
+                    equation.secondNumber = double.Parse(textBox1.Text);
+                    equation.Calculate();
+                    textBox1.Text = equation.result.ToString();
+                    resultDisplayed = true;
                     break;
             }
-
             timer2.Interval = 500;
             timer2.Start();
         }
