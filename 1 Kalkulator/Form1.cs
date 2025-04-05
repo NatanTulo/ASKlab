@@ -220,13 +220,24 @@ namespace _1_Kalkulator
 
         private void zielonyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.analog_clock.Load("Resources/green_clock.png");
         }
 
         private void pomarańczowyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //analog_clock.Image = ""
+            this.analog_clock.Load("Resources/orange_clock.png");
         }
+
+        private void różowyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.analog_clock.Load("Resources/pink_clock.png");
+        }
+
+        private void niebieskiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.analog_clock.Load("Resources/blue_clock.png");
+        }
+
 
         private void analog_clock_paint(object sender, PaintEventArgs e)
         {

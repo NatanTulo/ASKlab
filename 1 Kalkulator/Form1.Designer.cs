@@ -476,6 +476,7 @@
             this.różowyToolStripMenuItem.Name = "różowyToolStripMenuItem";
             this.różowyToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.różowyToolStripMenuItem.Text = "Różowy";
+            this.różowyToolStripMenuItem.Click += new System.EventHandler(this.różowyToolStripMenuItem_Click);
             // 
             // pomarańczowyToolStripMenuItem
             // 
@@ -489,6 +490,7 @@
             this.niebieskiToolStripMenuItem.Name = "niebieskiToolStripMenuItem";
             this.niebieskiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.niebieskiToolStripMenuItem.Text = "Niebieski";
+            this.niebieskiToolStripMenuItem.Click += new System.EventHandler(this.niebieskiToolStripMenuItem_Click);
             // 
             // zielonyToolStripMenuItem
             // 
