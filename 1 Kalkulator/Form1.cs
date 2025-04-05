@@ -13,12 +13,12 @@ using System.Windows.Forms;
 
 public struct Equation
 {
-    double firstNumber;
-    double secondNumber;
-    char operation;
+    public double firstNumber;
+    public double secondNumber;
+    public char operation;
     public double result;
-    bool[] isOptionSet;
-    string equationString;
+    public bool[] isOptionSet;
+    public string equationString;
 
     public Equation(double firstNumber, double secondNumber, char operation, double result, bool[] isOptionSet)
     {
@@ -28,6 +28,47 @@ public struct Equation
         this.result = result;
         this.isOptionSet = isOptionSet;
         this.equationString = string.Empty;
+    }
+
+    public void Clear()
+    {
+        firstNumber = 0;
+        secondNumber = 0;
+        operation = '0';
+        result = 0;
+        for (int i = 0; i < isOptionSet.Length; i++)
+        {
+            isOptionSet[i] = false;
+        }
+        equationString = string.Empty;
+    }
+
+    public void Calculate()
+    {
+        switch (operation)
+        {
+            case '+':
+                result = firstNumber + secondNumber;
+                break;
+            case '-':
+                result = firstNumber - secondNumber;
+                break;
+            case '*':
+                result = firstNumber * secondNumber;
+                break;
+            case '/':
+                if (secondNumber != 0)
+                    result = firstNumber / secondNumber;
+                else
+                    result = double.NaN; // Dzielenie przez zero
+                break;
+            case '%':
+                result = firstNumber % secondNumber;
+                break;
+            default:
+                result = secondNumber;
+                break;
+        }
     }
 }
 
@@ -55,12 +96,16 @@ namespace _1_Kalkulator
         {
             Button przycisk = (Button)sender;
             timer2.Stop();
+            string buttonText = przycisk.Text;
 
             if (lastClickedButton != null && lastClickedButton != przycisk)
             {
                 lastClickedButton.BackColor = this.skinColor;
             }
-
+            if (char.IsDigit(buttonText, 0))
+            {
+                textBox1.Text += buttonText;
+            }
             switch (przycisk.Name)
             {
                 case "one":
@@ -106,18 +151,33 @@ namespace _1_Kalkulator
                 case "comma":
                     this.comma.BackColor = Color.Red;
                     lastClickedButton = this.comma;
+
+                    if (!textBox1.Text.Contains(","))
+                    {
+                        textBox1.Text += ",";
+                    }
                     break;
                 case "clear":
                     this.clear.BackColor = Color.Red;
                     lastClickedButton = this.clear;
+
+                    textBox1.Clear();
+                    equation.Clear();
                     break;
                 case "negate":
                     this.negate.BackColor = Color.Red;
                     lastClickedButton = this.negate;
+
+                    if (double.TryParse(textBox1.Text, out double value))
+                    {
+                        textBox1.Text = (-value).ToString();
+                    }
                     break;
                 case "clear_entry":
                     this.clear_entry.BackColor = Color.Red;
                     lastClickedButton = this.clear_entry;
+
+                    textBox1.Clear();
                     break;
                 case "multiply":
                     this.multiply.BackColor = Color.Red;
@@ -138,10 +198,18 @@ namespace _1_Kalkulator
                 case "equals":
                     this.equals.BackColor = Color.Red;
                     lastClickedButton = this.equals;
+
+                    equation.secondNumber = double.Parse(textBox1.Text);
+                    equation.Calculate();
+                    textBox1.Text = equation.result.ToString();
                     break;
                 case "percent":
                     this.percent.BackColor = Color.Red;
                     lastClickedButton = this.percent;
+                    
+                    equation.firstNumber = double.Parse(textBox1.Text);
+                    equation.operation = buttonText[0];
+                    textBox1.Clear();
                     break;
             }
 
@@ -214,6 +282,12 @@ namespace _1_Kalkulator
                 case '%':
                     this.percent.PerformClick();
                     break;
+                case '\b': // Backspace key
+                if (textBox1.Text.Length > 0)
+                {
+                    textBox1.Text = textBox1.Text.Substring(0, textBox1.Text.Length - 1);
+                }
+                break;
             }
         }
 
