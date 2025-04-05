@@ -40,13 +40,13 @@ namespace _1_Kalkulator
         private PrivateFontCollection pfc = new PrivateFontCollection();
         private Equation equation = new Equation(0, 0, '0', 0, new bool[] { false, false, false, false });
 
-        // Pole przechowujące ostatnio kliknięty przycisk
         private Button lastClickedButton;
         private Color skinColor = Color.FromArgb(244, 189, 188);
 
         public Form1()
         {
             InitializeComponent();
+            this.ActiveControl = this.equals;
         }
 
         int height = 200, width = 200;
@@ -54,10 +54,8 @@ namespace _1_Kalkulator
         private void calc_Click(object sender, EventArgs e)
         {
             Button przycisk = (Button)sender;
-            // Reset timer before starting new 500 ms count
             timer2.Stop();
 
-            // Jeśli istnieje poprzednio aktywny przycisk i jest inny niż aktualny, resetuj jego kolor
             if (lastClickedButton != null && lastClickedButton != przycisk)
             {
                 lastClickedButton.BackColor = this.skinColor;
@@ -84,6 +82,126 @@ namespace _1_Kalkulator
                 timer2.Interval = 500;
                 timer2.Start();
             }
+            if (przycisk.Name == "four")
+            {
+                this.four.BackColor = Color.Red;
+                lastClickedButton = this.four;
+                timer2.Interval = 500;
+                timer2.Start();
+            }
+            if (przycisk.Name == "five")
+            {
+                this.five.BackColor = Color.Red;
+                lastClickedButton = this.five;
+                timer2.Interval = 500;
+                timer2.Start();
+            }
+            if (przycisk.Name == "six")
+            {
+                this.six.BackColor = Color.Red;
+                lastClickedButton = this.six;
+                timer2.Interval = 500;
+                timer2.Start();
+            }
+            if (przycisk.Name == "seven")
+            {
+                this.seven.BackColor = Color.Red;
+                lastClickedButton = this.seven;
+                timer2.Interval = 500;
+                timer2.Start();
+            }
+            if (przycisk.Name == "eight")
+            {
+                this.eight.BackColor = Color.Red;
+                lastClickedButton = this.eight;
+                timer2.Interval = 500;
+                timer2.Start();
+            }
+            if (przycisk.Name == "nine")
+            {
+                this.nine.BackColor = Color.Red;
+                lastClickedButton = this.nine;
+                timer2.Interval = 500;
+                timer2.Start();
+            }
+            if (przycisk.Name == "zero")
+            {
+                this.zero.BackColor = Color.Red;
+                lastClickedButton = this.zero;
+                timer2.Interval = 500;
+                timer2.Start();
+            }
+            if (przycisk.Name == "comma")
+            {
+                this.comma.BackColor = Color.Red;
+                lastClickedButton = this.comma;
+                timer2.Interval = 500;
+                timer2.Start();
+            }
+            if (przycisk.Name == "clear")
+            {
+                this.clear.BackColor = Color.Red;
+                lastClickedButton = this.clear;
+                timer2.Interval = 500;
+                timer2.Start();
+            }
+            if (przycisk.Name == "negate")
+            {
+                this.negate.BackColor = Color.Red;
+                lastClickedButton = this.negate;
+                timer2.Interval = 500;
+                timer2.Start();
+            }
+            if (przycisk.Name == "clear_entry")
+            {
+                this.clear_entry.BackColor = Color.Red;
+                lastClickedButton = this.clear_entry;
+                timer2.Interval = 500;
+                timer2.Start();
+            }
+            if (przycisk.Name == "multiply")
+            {
+                this.multiply.BackColor = Color.Red;
+                lastClickedButton = this.multiply;
+                timer2.Interval = 500;
+                timer2.Start();
+            }
+            if (przycisk.Name == "division")
+            {
+                this.division.BackColor = Color.Red;
+                lastClickedButton = this.division;
+                timer2.Interval = 500;
+                timer2.Start();
+            }
+            if (przycisk.Name == "minus")
+            {
+                this.minus.BackColor = Color.Red;
+                lastClickedButton = this.minus;
+                timer2.Interval = 500;
+                timer2.Start();
+            }
+            if (przycisk.Name == "plus")
+            {
+                this.plus.BackColor = Color.Red;
+                lastClickedButton = this.plus;
+                timer2.Interval = 500;
+                timer2.Start();
+            }
+            if (przycisk.Name == "equals")
+            {
+                this.equals.BackColor = Color.Red;
+                lastClickedButton = this.equals;
+                timer2.Interval = 500;
+                timer2.Start();
+            }
+            if (przycisk.Name == "percent")
+            {
+                this.percent.BackColor = Color.Red;
+                lastClickedButton = this.percent;
+                timer2.Interval = 500;
+                timer2.Start();
+            }
+
         }
         private void calc_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -98,6 +216,74 @@ namespace _1_Kalkulator
             if (e.KeyChar == '3')
             {
                 this.three.PerformClick();
+            }
+            if (e.KeyChar == '4')
+            {
+                this.four.PerformClick();
+            }
+            if (e.KeyChar == '5')
+            {
+                this.five.PerformClick();
+            }
+            if (e.KeyChar == '6')
+            {
+                this.six.PerformClick();
+            }
+            if (e.KeyChar == '7')
+            {
+                this.seven.PerformClick();
+            }
+            if (e.KeyChar == '8')
+            {
+                this.eight.PerformClick();
+            }
+            if (e.KeyChar == '9')
+            {
+                this.nine.PerformClick();
+            }
+            if (e.KeyChar == '0')
+            {
+                this.zero.PerformClick();
+            }
+            if (e.KeyChar == ',')
+            {
+                this.comma.PerformClick();
+            }
+            if (e.KeyChar == '+')
+            {
+                this.plus.PerformClick();
+            }
+            if (e.KeyChar == '-')
+            {
+                this.minus.PerformClick();
+            }
+            if (e.KeyChar == '*')
+            {
+                this.multiply.PerformClick();
+            }
+            if (e.KeyChar == '/')
+            {
+                this.division.PerformClick();
+            }
+            if (e.KeyChar == '=' || e.KeyChar == '\r')
+            {
+                this.equals.PerformClick();
+            }
+            if (e.KeyChar == 'c')
+            {
+                this.clear.PerformClick();
+            }
+            if (e.KeyChar == 'C')
+            {
+                this.clear_entry.PerformClick();
+            }
+            if (e.KeyChar == 'n')
+            {
+                this.negate.PerformClick();
+            }
+            if (e.KeyChar == '%')
+            {
+                this.percent.PerformClick();
             }
         }
 
