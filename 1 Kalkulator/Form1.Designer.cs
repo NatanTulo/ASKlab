@@ -58,7 +58,19 @@
             this.analog = new System.Windows.Forms.Button();
             this.digital = new System.Windows.Forms.Button();
             this.analog_clock = new System.Windows.Forms.PictureBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.skórkaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pinkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.oragneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.blueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.greenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.zegarAnalogowyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.różowyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pomarańczowyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.niebieskiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.zielonyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.analog_clock)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // one
@@ -326,12 +338,12 @@
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F);
             this.textBox1.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox1.Location = new System.Drawing.Point(6, 212);
+            this.textBox1.Location = new System.Drawing.Point(9, 220);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(520, 108);
+            this.textBox1.Size = new System.Drawing.Size(519, 100);
             this.textBox1.TabIndex = 21;
             this.textBox1.Text = "0";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -364,7 +376,7 @@
             this.analog.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.analog.Location = new System.Drawing.Point(36, 110);
             this.analog.Name = "analog";
-            this.analog.Size = new System.Drawing.Size(90, 40);
+            this.analog.Size = new System.Drawing.Size(90, 35);
             this.analog.TabIndex = 23;
             this.analog.Text = "ANALOG";
             this.analog.UseVisualStyleBackColor = false;
@@ -373,11 +385,12 @@
             // digital
             // 
             this.digital.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(189)))), ((int)(((byte)(188)))));
+            this.digital.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.digital.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.digital.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.digital.Location = new System.Drawing.Point(36, 64);
+            this.digital.Location = new System.Drawing.Point(36, 71);
             this.digital.Name = "digital";
-            this.digital.Size = new System.Drawing.Size(90, 40);
+            this.digital.Size = new System.Drawing.Size(90, 35);
             this.digital.TabIndex = 24;
             this.digital.Text = "DIGITAL";
             this.digital.UseVisualStyleBackColor = false;
@@ -386,9 +399,9 @@
             // analog_clock
             // 
             this.analog_clock.Image = ((System.Drawing.Image)(resources.GetObject("analog_clock.Image")));
-            this.analog_clock.Location = new System.Drawing.Point(158, 4);
+            this.analog_clock.Location = new System.Drawing.Point(146, 21);
             this.analog_clock.Name = "analog_clock";
-            this.analog_clock.Size = new System.Drawing.Size(241, 203);
+            this.analog_clock.Size = new System.Drawing.Size(265, 209);
             this.analog_clock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.analog_clock.TabIndex = 25;
             this.analog_clock.TabStop = false;
@@ -396,13 +409,101 @@
             this.analog_clock.Click += new System.EventHandler(this.pictureBox1_Click);
             this.analog_clock.Paint += new System.Windows.Forms.PaintEventHandler(this.analog_clock_paint);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.skórkaToolStripMenuItem,
+            this.zegarAnalogowyToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(537, 28);
+            this.menuStrip1.TabIndex = 26;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // skórkaToolStripMenuItem
+            // 
+            this.skórkaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pinkToolStripMenuItem,
+            this.oragneToolStripMenuItem,
+            this.blueToolStripMenuItem,
+            this.greenToolStripMenuItem});
+            this.skórkaToolStripMenuItem.Name = "skórkaToolStripMenuItem";
+            this.skórkaToolStripMenuItem.Size = new System.Drawing.Size(67, 24);
+            this.skórkaToolStripMenuItem.Text = "Skórka";
+            // 
+            // pinkToolStripMenuItem
+            // 
+            this.pinkToolStripMenuItem.Name = "pinkToolStripMenuItem";
+            this.pinkToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
+            this.pinkToolStripMenuItem.Text = "Różowa";
+            this.pinkToolStripMenuItem.Click += new System.EventHandler(this.pinkToolStripMenuItem_Click);
+            // 
+            // oragneToolStripMenuItem
+            // 
+            this.oragneToolStripMenuItem.Name = "oragneToolStripMenuItem";
+            this.oragneToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
+            this.oragneToolStripMenuItem.Text = "Pomarańczowa";
+            this.oragneToolStripMenuItem.Click += new System.EventHandler(this.oragneToolStripMenuItem_Click);
+            // 
+            // blueToolStripMenuItem
+            // 
+            this.blueToolStripMenuItem.Name = "blueToolStripMenuItem";
+            this.blueToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
+            this.blueToolStripMenuItem.Text = "Niebieska";
+            this.blueToolStripMenuItem.Click += new System.EventHandler(this.blueToolStripMenuItem_Click);
+            // 
+            // greenToolStripMenuItem
+            // 
+            this.greenToolStripMenuItem.Name = "greenToolStripMenuItem";
+            this.greenToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
+            this.greenToolStripMenuItem.Text = "Zielona";
+            this.greenToolStripMenuItem.Click += new System.EventHandler(this.greenToolStripMenuItem_Click);
+            // 
+            // zegarAnalogowyToolStripMenuItem
+            // 
+            this.zegarAnalogowyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.różowyToolStripMenuItem,
+            this.pomarańczowyToolStripMenuItem,
+            this.niebieskiToolStripMenuItem,
+            this.zielonyToolStripMenuItem});
+            this.zegarAnalogowyToolStripMenuItem.Name = "zegarAnalogowyToolStripMenuItem";
+            this.zegarAnalogowyToolStripMenuItem.Size = new System.Drawing.Size(139, 24);
+            this.zegarAnalogowyToolStripMenuItem.Text = "Zegar analogowy";
+            // 
+            // różowyToolStripMenuItem
+            // 
+            this.różowyToolStripMenuItem.Name = "różowyToolStripMenuItem";
+            this.różowyToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.różowyToolStripMenuItem.Text = "Różowy";
+            // 
+            // pomarańczowyToolStripMenuItem
+            // 
+            this.pomarańczowyToolStripMenuItem.Name = "pomarańczowyToolStripMenuItem";
+            this.pomarańczowyToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.pomarańczowyToolStripMenuItem.Text = "Pomarańczowy";
+            this.pomarańczowyToolStripMenuItem.Click += new System.EventHandler(this.pomarańczowyToolStripMenuItem_Click);
+            // 
+            // niebieskiToolStripMenuItem
+            // 
+            this.niebieskiToolStripMenuItem.Name = "niebieskiToolStripMenuItem";
+            this.niebieskiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.niebieskiToolStripMenuItem.Text = "Niebieski";
+            // 
+            // zielonyToolStripMenuItem
+            // 
+            this.zielonyToolStripMenuItem.Name = "zielonyToolStripMenuItem";
+            this.zielonyToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.zielonyToolStripMenuItem.Text = "Zielony";
+            this.zielonyToolStripMenuItem.Click += new System.EventHandler(this.zielonyToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(223)))), ((int)(((byte)(221)))));
             this.ClientSize = new System.Drawing.Size(537, 753);
-            this.Controls.Add(this.analog_clock);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.digital);
             this.Controls.Add(this.analog);
             this.Controls.Add(this.digital_clock);
@@ -427,11 +528,15 @@
             this.Controls.Add(this.six);
             this.Controls.Add(this.plus);
             this.Controls.Add(this.one);
+            this.Controls.Add(this.analog_clock);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Calculator with clock";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.analog_clock)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -467,6 +572,17 @@
         private System.Windows.Forms.Button analog;
         private System.Windows.Forms.Button digital;
         private System.Windows.Forms.PictureBox analog_clock;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem skórkaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pinkToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem oragneToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem blueToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem greenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem zegarAnalogowyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem różowyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pomarańczowyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem niebieskiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem zielonyToolStripMenuItem;
     }
 }
 

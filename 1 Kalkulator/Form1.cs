@@ -144,7 +144,6 @@ namespace _1_Kalkulator
         {
             timer1.Start();
 
-
         }
 
         private void digital_clock_Click(object sender, EventArgs e)
@@ -168,6 +167,65 @@ namespace _1_Kalkulator
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void oragneToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.BackColor = Color.FromArgb(232, 152, 93);
+            foreach (Control ctrl in this.Controls)
+            {
+                if (ctrl is Button btn)
+                {
+                    btn.BackColor = Color.FromArgb(165, 89, 60);
+                }
+            }
+        }
+
+        private void greenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.BackColor = Color.FromArgb(223, 225, 176);
+            foreach (Control ctrl in this.Controls)
+            {
+                if (ctrl is Button btn)
+                {
+                    btn.BackColor = Color.FromArgb(151, 157, 85);
+                }
+            }
+        }
+
+        private void pinkToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+            this.BackColor = Color.FromArgb(252, 223, 221);
+            foreach (Control ctrl in this.Controls)
+            {
+                if (ctrl is Button btn)
+                {
+                    btn.BackColor = Color.FromArgb(244, 189, 188);
+                }
+            }
+        }
+
+        private void blueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.BackColor = Color.FromArgb(223, 242, 248);
+            foreach (Control ctrl in this.Controls)
+            {
+                if (ctrl is Button btn)
+                {
+                    btn.BackColor = Color.FromArgb(133, 204, 226);
+                }
+            }
+        }
+
+        private void zielonyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pomarańczowyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //analog_clock.Image = ""
         }
 
         private void analog_clock_paint(object sender, PaintEventArgs e)
