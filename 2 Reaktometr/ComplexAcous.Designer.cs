@@ -117,11 +117,12 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(694, 9);
+            this.label5.Location = new System.Drawing.Point(118, 9);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 13);
+            this.label5.Size = new System.Drawing.Size(624, 13);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Instrukcja obsługi:";
+            this.label5.Text = "Instrukcja: Naciśnij spację, aby rozpocząć prezentację tonów, a następnie grę. Kl" +
+    "iknij przycisk odpowiadający usłyszanemu tonowi.";
             // 
             // ComplexAcous
             // 

@@ -45,11 +45,12 @@ namespace _2_Reaktometr
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(694, 9);
+            this.label2.Location = new System.Drawing.Point(129, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 13);
+            this.label2.Size = new System.Drawing.Size(523, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Instrukcja obsługi:";
+            this.label2.Text = "Instrukcja: Naciśnij spację, aby rozpocząć test optyczny. Gdy ekran zmieni kolor," +
+    " kliknij, aby zatrzymać licznik.";
             // 
             // SimpleOptic
             // 

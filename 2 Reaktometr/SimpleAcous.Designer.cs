@@ -44,11 +44,12 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(694, 9);
+            this.label2.Location = new System.Drawing.Point(157, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 13);
+            this.label2.Size = new System.Drawing.Size(517, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Instrukcja obsługi:";
+            this.label2.Text = "Instrukcja: Naciśnij spację, aby rozpocząć test akustyczny. Po usłyszeniu tonu, k" +
+    "liknij, aby zatrzymać licznik.";
             // 
             // SimpleAcous
             // 
