@@ -31,6 +31,7 @@ namespace _2_Reaktometr
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -41,16 +42,25 @@ namespace _2_Reaktometr
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 0;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(694, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Instrukcja obsługi:";
+            // 
             // SimpleOptic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "SimpleOptic";
             this.Text = "Optyczne";
-            this.Load += new System.EventHandler(this.SimpleOptic_Load);
             this.Click += new System.EventHandler(this.SimpleOptic_Click);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SimpleOptic_KeyPress);
             this.ResumeLayout(false);
@@ -61,5 +71,6 @@ namespace _2_Reaktometr
         #endregion
 
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

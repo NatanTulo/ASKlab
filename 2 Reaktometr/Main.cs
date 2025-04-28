@@ -40,10 +40,5 @@ namespace _2_Reaktometr
             this.ComAco = new ComplexAcous();
             this.ComAco.ShowDialog();
         }
-
-        private void Main_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

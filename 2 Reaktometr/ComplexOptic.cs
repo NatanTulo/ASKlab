@@ -33,15 +33,10 @@ namespace _2_Reaktometr
                 this.label3.Text = $"Średnia: {sumTime/point} ms";
                 if(point == 15)
                 {
-                    this.label4.Text = $"Koniec gry! \n\nPunkty: {point} \nCzas: {sumTime} ms";
+                    this.label4.Text = $"Koniec gry!";
                 }
                 roundCompleteTcs?.TrySetResult(true);
             }
-        }
-
-        private void ComplexOptic_Load(object sender, EventArgs e)
-        {
-            this.ActiveControl = null;
         }
 
         private async Task RunGame()

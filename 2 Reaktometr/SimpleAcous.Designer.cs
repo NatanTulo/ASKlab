@@ -30,15 +30,25 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(213, 175);
+            this.label1.Location = new System.Drawing.Point(327, 217);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(694, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Instrukcja obsługi:";
             // 
             // SimpleAcous
             // 
@@ -46,10 +56,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "SimpleAcous";
             this.Text = "Akustyczne";
-            this.Load += new System.EventHandler(this.SimpleAcous_Load);
             this.Click += new System.EventHandler(this.SimpleAcous_Click);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SimpleAcous_KeyPress);
             this.ResumeLayout(false);
@@ -60,5 +70,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -44,10 +44,5 @@ namespace _2_Reaktometr
                 simOptoTimer.StartTest();
             }
         }
-
-        private void SimpleOptic_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
