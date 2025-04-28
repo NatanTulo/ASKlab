@@ -8,7 +8,7 @@ namespace _2_Reaktometr
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-        ReactionTimer optoTimer = new ReactionTimer();
+        ReactionTimer simOptoTimer = new ReactionTimer();
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>

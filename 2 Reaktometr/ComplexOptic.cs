@@ -12,54 +12,55 @@ namespace _2_Reaktometr
 {
     public partial class ComplexOptic : Form
     {
+        private TaskCompletionSource<bool> roundCompleteTcs;
+
         public ComplexOptic()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-
+            Button btn = sender as Button;
+            if (btn != null && btn.BackColor == Color.Red)
+            {
+                point++;
+                btn.BackColor = SystemColors.Control;
+                long lastTime = comOptoTimer.StopTest();
+                sumTime += lastTime;
+                this.label1.Text = $"Punkty: {point}";
+                this.label2.Text += $"\nRunda {point}: {lastTime} ms";
+                this.label3.Text = $"Średnia: {sumTime/point} ms";
+                if(point == 15)
+                {
+                    this.label4.Text = $"Koniec gry! \n\nPunkty: {point} \nCzas: {sumTime} ms";
+                }
+                roundCompleteTcs?.TrySetResult(true);
+            }
         }
 
         private void ComplexOptic_Load(object sender, EventArgs e)
         {
+            this.ActiveControl = null;
+        }
 
+        private async Task RunGame()
+        {
+            Button[] buttons = new Button[] { button1, button2, button3, button4, button5, button6, button7, button8 };
+            for (int i = 0; i < 15; i++)
+            {
+                await Task.Delay(new Random().Next(500, 1000));
+
+                foreach (var btn in buttons)
+                    btn.BackColor = SystemColors.Control;
+                
+                int idx = new Random().Next(buttons.Length);
+                buttons[idx].BackColor = Color.Red;
+                comOptoTimer.StartTest();
+
+                roundCompleteTcs = new TaskCompletionSource<bool>();
+                await roundCompleteTcs.Task;
+            }
         }
 
         private async void ComplexOptic_KeyPress(object sender, KeyPressEventArgs e)
@@ -70,12 +71,8 @@ namespace _2_Reaktometr
             }
             if (e.KeyChar == (char)Keys.Space)
             {
-                //this.BackColor = Color.White;
-                //this.label1.ForeColor = Color.Red;
-                //this.label1.Text = "Przygotuj się";
-                await Task.Delay(new Random().Next(1000, 3000));
-                //this.BackColor = Color.Black;
-                //optoTimer.StartTest();
+                point = 0;
+                await RunGame();
             }
         }
     }

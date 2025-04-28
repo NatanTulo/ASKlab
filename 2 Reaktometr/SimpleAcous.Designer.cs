@@ -6,7 +6,7 @@
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-        ReactionTimer akusTimer = new ReactionTimer();
+        ReactionTimer simAcousTimer = new ReactionTimer();
         private ContinuousTone _tone = new ContinuousTone();
         /// <summary>
         /// Clean up any resources being used.

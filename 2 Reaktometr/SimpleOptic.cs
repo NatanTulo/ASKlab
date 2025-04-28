@@ -22,7 +22,7 @@ namespace _2_Reaktometr
         private void SimpleOptic_Click(object sender, EventArgs e)
         {
             this.BackColor = Color.White;
-            long timeSW = optoTimer.StopTest();
+            long timeSW = simOptoTimer.StopTest();
             if (timeSW != 0)
                 this.label1.Text = "Czas: " + timeSW.ToString() + " ms";
             this.label1.ForeColor = Color.Black;
@@ -41,7 +41,7 @@ namespace _2_Reaktometr
                 this.label1.Text = "Przygotuj się";
                 await Task.Delay(new Random().Next(1000, 3000));
                 this.BackColor = Color.Black;
-                optoTimer.StartTest();
+                simOptoTimer.StartTest();
             }
         }
 
