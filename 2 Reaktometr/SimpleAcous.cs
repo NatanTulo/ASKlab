@@ -19,7 +19,7 @@ namespace _2_Reaktometr
             InitializeComponent();
         }
 
-        private void Akustyczne_Click(object sender, EventArgs e)
+        private void SimpleAcous_Click(object sender, EventArgs e)
         {
             this.BackColor = Color.White;
             long timeSW = akusTimer.StopTest();
@@ -29,7 +29,7 @@ namespace _2_Reaktometr
             this.label1.ForeColor = Color.Black;
         }
 
-        private async void Akustyczne_KeyPress(object sender, KeyPressEventArgs e)
+        private async void SimpleAcous_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Escape)
             {
@@ -50,6 +50,11 @@ namespace _2_Reaktometr
         {
             base.OnFormClosing(e);
             _tone.Stop();
+        }
+
+        private void SimpleAcous_Load(object sender, EventArgs e)
+        {
+
         }
     }
 

@@ -10,6 +10,8 @@ namespace _2_Reaktometr
         private System.ComponentModel.IContainer components = null;
         public SimpleOptic SimOpt;
         public SimpleAcous SimAco;
+        public ComplexOptic ComOpt;
+        public ComplexAcous ComAco;
 
         /// <summary>
         /// Wyczyść wszystkie używane zasoby.
@@ -37,8 +39,8 @@ namespace _2_Reaktometr
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.comOpto = new System.Windows.Forms.Button();
+            this.comAcous = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // simOpto
@@ -88,31 +90,33 @@ namespace _2_Reaktometr
             this.label3.TabIndex = 3;
             this.label3.Text = "Testy akustyczne";
             // 
-            // button1
+            // comOpto
             // 
-            this.button1.Location = new System.Drawing.Point(166, 278);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 140);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Złożony test optyczny";
-            this.button1.UseVisualStyleBackColor = true;
+            this.comOpto.Location = new System.Drawing.Point(166, 278);
+            this.comOpto.Name = "comOpto";
+            this.comOpto.Size = new System.Drawing.Size(140, 140);
+            this.comOpto.TabIndex = 4;
+            this.comOpto.Text = "Złożony test optyczny";
+            this.comOpto.UseVisualStyleBackColor = true;
+            this.comOpto.Click += new System.EventHandler(this.comOpto_Click);
             // 
-            // button2
+            // comAcous
             // 
-            this.button2.Location = new System.Drawing.Point(521, 278);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(140, 140);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Złożony test akustyczny";
-            this.button2.UseVisualStyleBackColor = true;
+            this.comAcous.Location = new System.Drawing.Point(521, 278);
+            this.comAcous.Name = "comAcous";
+            this.comAcous.Size = new System.Drawing.Size(140, 140);
+            this.comAcous.TabIndex = 5;
+            this.comAcous.Text = "Złożony test akustyczny";
+            this.comAcous.UseVisualStyleBackColor = true;
+            this.comAcous.Click += new System.EventHandler(this.comAcous_Click);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.comAcous);
+            this.Controls.Add(this.comOpto);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -120,6 +124,7 @@ namespace _2_Reaktometr
             this.Controls.Add(this.simOpto);
             this.Name = "Main";
             this.Text = "Reaktometr";
+            this.Load += new System.EventHandler(this.Main_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,8 +137,8 @@ namespace _2_Reaktometr
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button comOpto;
+        private System.Windows.Forms.Button comAcous;
     }
     public class ReactionTimer
     {

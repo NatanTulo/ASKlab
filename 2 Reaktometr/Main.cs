@@ -28,5 +28,22 @@ namespace _2_Reaktometr
             this.SimAco = new SimpleAcous();
             this.SimAco.ShowDialog();
         }
+
+        private void comOpto_Click(object sender, EventArgs e)
+        {
+            this.ComOpt = new ComplexOptic();
+            this.ComOpt.ShowDialog();
+        }
+
+        private void comAcous_Click(object sender, EventArgs e)
+        {
+            this.ComAco = new ComplexAcous();
+            this.ComAco.ShowDialog();
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

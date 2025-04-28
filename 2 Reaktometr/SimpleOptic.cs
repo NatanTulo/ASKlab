@@ -19,7 +19,7 @@ namespace _2_Reaktometr
             InitializeComponent();
         }
 
-        private void Optyczne_Click(object sender, EventArgs e)
+        private void SimpleOptic_Click(object sender, EventArgs e)
         {
             this.BackColor = Color.White;
             long timeSW = optoTimer.StopTest();
@@ -28,7 +28,7 @@ namespace _2_Reaktometr
             this.label1.ForeColor = Color.Black;
         }
 
-        private async void Optyczne_KeyPress(object sender, KeyPressEventArgs e)
+        private async void SimpleOptic_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Escape)
             {
@@ -43,6 +43,11 @@ namespace _2_Reaktometr
                 this.BackColor = Color.Black;
                 optoTimer.StartTest();
             }
+        }
+
+        private void SimpleOptic_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

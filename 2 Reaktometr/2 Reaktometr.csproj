@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComplexAcous.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComplexAcous.Designer.cs">
+      <DependentUpon>ComplexAcous.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComplexOptic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComplexOptic.Designer.cs">
+      <DependentUpon>ComplexOptic.cs</DependentUpon>
+    </Compile>
     <Compile Include="SimpleAcous.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +78,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ComplexAcous.resx">
+      <DependentUpon>ComplexAcous.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComplexOptic.resx">
+      <DependentUpon>ComplexOptic.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SimpleAcous.resx">
       <DependentUpon>SimpleAcous.cs</DependentUpon>
     </EmbeddedResource>

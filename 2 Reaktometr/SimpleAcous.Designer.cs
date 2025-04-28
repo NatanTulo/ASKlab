@@ -49,8 +49,9 @@
             this.Controls.Add(this.label1);
             this.Name = "SimpleAcous";
             this.Text = "Akustyczne";
-            this.Click += new System.EventHandler(this.Akustyczne_Click);
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Akustyczne_KeyPress);
+            this.Load += new System.EventHandler(this.SimpleAcous_Load);
+            this.Click += new System.EventHandler(this.SimpleAcous_Click);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SimpleAcous_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 
