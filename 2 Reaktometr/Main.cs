@@ -17,16 +17,16 @@ namespace _2_Reaktometr
             InitializeComponent();
         }
 
-        private void opto_Click(object sender, EventArgs e)
+        private void simOpto_Click(object sender, EventArgs e)
         {
-            this.oknOptynczne = new Optyczne();
-            this.oknOptynczne.ShowDialog();
+            this.SimOpt = new SimpleOptic();
+            this.SimOpt.ShowDialog();
         }
 
-        private void akus_Click(object sender, EventArgs e)
+        private void simAcous_Click(object sender, EventArgs e)
         {
-            this.oknAkustyczne = new Akustyczne();
-            this.oknAkustyczne.ShowDialog();
+            this.SimAco = new SimpleAcous();
+            this.SimAco.ShowDialog();
         }
     }
 }

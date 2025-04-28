@@ -8,8 +8,8 @@ namespace _2_Reaktometr
         /// Wymagana zmienna projektanta.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-        public Optyczne oknOptynczne;
-        public Akustyczne oknAkustyczne;
+        public SimpleOptic SimOpt;
+        public SimpleAcous SimAco;
 
         /// <summary>
         /// Wyczyść wszystkie używane zasoby.
@@ -32,39 +32,92 @@ namespace _2_Reaktometr
         /// </summary>
         private void InitializeComponent()
         {
-            this.opto = new System.Windows.Forms.Button();
-            this.akus = new System.Windows.Forms.Button();
+            this.simOpto = new System.Windows.Forms.Button();
+            this.simAcous = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // opto
+            // simOpto
             // 
-            this.opto.Location = new System.Drawing.Point(160, 138);
-            this.opto.Name = "opto";
-            this.opto.Size = new System.Drawing.Size(135, 140);
-            this.opto.TabIndex = 0;
-            this.opto.Text = "Testy optyczne";
-            this.opto.UseVisualStyleBackColor = true;
-            this.opto.Click += new System.EventHandler(this.opto_Click);
+            this.simOpto.Location = new System.Drawing.Point(166, 115);
+            this.simOpto.Name = "simOpto";
+            this.simOpto.Size = new System.Drawing.Size(140, 140);
+            this.simOpto.TabIndex = 0;
+            this.simOpto.Text = "Prosty test optyczny";
+            this.simOpto.UseVisualStyleBackColor = true;
+            this.simOpto.Click += new System.EventHandler(this.simOpto_Click);
             // 
-            // akus
+            // simAcous
             // 
-            this.akus.Location = new System.Drawing.Point(523, 138);
-            this.akus.Name = "akus";
-            this.akus.Size = new System.Drawing.Size(144, 140);
-            this.akus.TabIndex = 1;
-            this.akus.Text = "Testy akustyczne";
-            this.akus.UseVisualStyleBackColor = true;
-            this.akus.Click += new System.EventHandler(this.akus_Click);
+            this.simAcous.Location = new System.Drawing.Point(521, 115);
+            this.simAcous.Name = "simAcous";
+            this.simAcous.Size = new System.Drawing.Size(140, 140);
+            this.simAcous.TabIndex = 1;
+            this.simAcous.Text = "Prosty test akustyczny";
+            this.simAcous.UseVisualStyleBackColor = true;
+            this.simAcous.Click += new System.EventHandler(this.simAcous_Click);
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(349, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(121, 27);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Reaktometr";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(189, 79);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Testy optyczne";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(547, 79);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(90, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Testy akustyczne";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(166, 278);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(140, 140);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Złożony test optyczny";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(521, 278);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(140, 140);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Złożony test akustyczny";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.akus);
-            this.Controls.Add(this.opto);
+            this.Controls.Add(this.simAcous);
+            this.Controls.Add(this.simOpto);
             this.Name = "Main";
             this.Text = "Reaktometr";
             this.ResumeLayout(false);
@@ -74,9 +127,13 @@ namespace _2_Reaktometr
 
         #endregion
 
-        private System.Windows.Forms.Button opto;
-        private System.Windows.Forms.Button akus;
+        private System.Windows.Forms.Button simOpto;
+        private System.Windows.Forms.Button simAcous;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
     public class ReactionTimer
     {

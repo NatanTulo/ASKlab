@@ -12,9 +12,9 @@ using System.Threading;
 
 namespace _2_Reaktometr
 {
-    public partial class Akustyczne : Form
+    public partial class SimpleAcous : Form
     {
-        public Akustyczne()
+        public SimpleAcous()
         {
             InitializeComponent();
         }

@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Akustyczne.cs">
+    <Compile Include="SimpleAcous.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Akustyczne.Designer.cs">
-      <DependentUpon>Akustyczne.cs</DependentUpon>
+    <Compile Include="SimpleAcous.Designer.cs">
+      <DependentUpon>SimpleAcous.cs</DependentUpon>
     </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -58,22 +58,22 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Optyczne.cs">
+    <Compile Include="SimpleOptic.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Optyczne.Designer.cs">
-      <DependentUpon>Optyczne.cs</DependentUpon>
+    <Compile Include="SimpleOptic.Designer.cs">
+      <DependentUpon>SimpleOptic.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Akustyczne.resx">
-      <DependentUpon>Akustyczne.cs</DependentUpon>
+    <EmbeddedResource Include="SimpleAcous.resx">
+      <DependentUpon>SimpleAcous.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Optyczne.resx">
-      <DependentUpon>Optyczne.cs</DependentUpon>
+    <EmbeddedResource Include="SimpleOptic.resx">
+      <DependentUpon>SimpleOptic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

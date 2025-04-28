@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace _2_Reaktometr
 {
-    public partial class Optyczne : Form
+    public partial class SimpleOptic : Form
     {
-        public Optyczne()
+        public SimpleOptic()
         {
             InitializeComponent();
         }

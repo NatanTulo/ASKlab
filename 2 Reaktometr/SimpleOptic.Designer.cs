@@ -1,13 +1,14 @@
-﻿namespace _2_Reaktometr
+﻿using System.Drawing;
+
+namespace _2_Reaktometr
 {
-    partial class Akustyczne
+    partial class SimpleOptic
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-        ReactionTimer akusTimer = new ReactionTimer();
-        private ContinuousTone _tone = new ContinuousTone();
+        ReactionTimer optoTimer = new ReactionTimer();
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -35,22 +36,22 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(213, 175);
+            this.label1.Location = new System.Drawing.Point(295, 199);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 0;
             // 
-            // Akustyczne
+            // Optyczne
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
-            this.Name = "Akustyczne";
-            this.Text = "Akustyczne";
-            this.Click += new System.EventHandler(this.Akustyczne_Click);
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Akustyczne_KeyPress);
+            this.Name = "Optyczne";
+            this.Text = "Optyczne";
+            this.Click += new System.EventHandler(this.Optyczne_Click);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Optyczne_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 
