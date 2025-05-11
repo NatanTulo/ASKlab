@@ -39,63 +39,69 @@
             // inputTextBox
             // 
             this.inputTextBox.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.inputTextBox.Location = new System.Drawing.Point(24, 48);
+            this.inputTextBox.Location = new System.Drawing.Point(18, 39);
+            this.inputTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.inputTextBox.Multiline = true;
             this.inputTextBox.Name = "inputTextBox";
-            this.inputTextBox.Size = new System.Drawing.Size(610, 289);
+            this.inputTextBox.Size = new System.Drawing.Size(458, 236);
             this.inputTextBox.TabIndex = 1;
             // 
             // encodedTextBox
             // 
             this.encodedTextBox.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.encodedTextBox.Enabled = false;
-            this.encodedTextBox.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.encodedTextBox.Location = new System.Drawing.Point(24, 518);
+            this.encodedTextBox.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.encodedTextBox.Location = new System.Drawing.Point(18, 421);
+            this.encodedTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.encodedTextBox.Multiline = true;
             this.encodedTextBox.Name = "encodedTextBox";
             this.encodedTextBox.ReadOnly = true;
-            this.encodedTextBox.Size = new System.Drawing.Size(610, 289);
+            this.encodedTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.encodedTextBox.Size = new System.Drawing.Size(458, 236);
             this.encodedTextBox.TabIndex = 2;
             // 
             // input_label
             // 
             this.input_label.AutoSize = true;
-            this.input_label.Location = new System.Drawing.Point(24, 26);
+            this.input_label.Location = new System.Drawing.Point(18, 21);
+            this.input_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.input_label.Name = "input_label";
-            this.input_label.Size = new System.Drawing.Size(162, 16);
+            this.input_label.Size = new System.Drawing.Size(131, 13);
             this.input_label.TabIndex = 3;
             this.input_label.Text = "Wejściowe pole tekstowe:";
             // 
             // encoded_label
             // 
             this.encoded_label.AutoSize = true;
-            this.encoded_label.Location = new System.Drawing.Point(27, 496);
+            this.encoded_label.Location = new System.Drawing.Point(20, 403);
+            this.encoded_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.encoded_label.Name = "encoded_label";
-            this.encoded_label.Size = new System.Drawing.Size(153, 16);
+            this.encoded_label.Size = new System.Drawing.Size(122, 13);
             this.encoded_label.TabIndex = 4;
             this.encoded_label.Text = "Zakodowana transmisja:";
             // 
             // sendButton
             // 
             this.sendButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.sendButton.Location = new System.Drawing.Point(184, 366);
+            this.sendButton.Location = new System.Drawing.Point(138, 297);
+            this.sendButton.Margin = new System.Windows.Forms.Padding(2);
             this.sendButton.Name = "sendButton";
-            this.sendButton.Size = new System.Drawing.Size(285, 95);
+            this.sendButton.Size = new System.Drawing.Size(214, 77);
             this.sendButton.TabIndex = 5;
             this.sendButton.Text = "Wyślij wiadomość";
             this.sendButton.UseVisualStyleBackColor = true;
+            this.sendButton.Click += new System.EventHandler(this.sendButton_Click);
             // 
             // Transmitter
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(661, 897);
+            this.ClientSize = new System.Drawing.Size(496, 729);
             this.Controls.Add(this.sendButton);
             this.Controls.Add(this.encoded_label);
             this.Controls.Add(this.input_label);
             this.Controls.Add(this.encodedTextBox);
             this.Controls.Add(this.inputTextBox);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Transmitter";
             this.Text = "Transmitter";
             this.ResumeLayout(false);
